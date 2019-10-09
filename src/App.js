@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
+import Chart from './components/Chart/Chart';
 import './App.css';
 
-function App() {
-  return (
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+        chartData: {},        
+    }
+    this.getCharData = this.getCharData.bind(this);
+  } // constructor
+
+  componentWillMount() {
+    this.getCharData();
+  }
+
+  getCharData() {
+    this.setState({
+      chartData: {
+          labels: ["Tablet", "Smartphone"],
+          datasets: [
+          {
+            label: 'Population',
+            data:[
+                  120000,
+                  80000
+              ],
+            backgroundColor: [
+              "#89cf46", 
+              "#3a6712"
+              ],
+            borderWidth: [
+                    0, 
+                    0
+              ]
+          }]
+        } // chartData
+    })
+  }
+
+  render(){ 
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Chart chartData={this.state.chartData}  />
     </div>
-  );
+    );
+  }
 }
 
 export default App;
