@@ -14,7 +14,7 @@ npm
 Descarga el proyecto e instala las dependencias
 
 ```
-usuario@tu-maquina:~/misarchivos$ git clone https://github.com/ramirovazq/front-dashboard-donut
+usuario@tu-maquina:~/misarchivos$ git clone https://github.com/ramirovazq/front-dashboard-donut.git
 usuario@tu-maquina:~/misarchivos$ cd front-dashboard-donut/
 usuario@tu-maquina:~/misarchivos$ npm install
 ```
