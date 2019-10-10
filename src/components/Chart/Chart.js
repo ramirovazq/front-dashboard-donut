@@ -7,7 +7,9 @@ export default class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = {    	
-        chartData: props.chartData
+        chartData: props.chartData,        
+        textTop: props.textTop,
+        textBottom:props.textBottom
     }    
   } // constructor
 
@@ -16,7 +18,7 @@ export default class Chart extends Component {
     	displayTitle: false,
     	displayLegend: false,
     	legendPosition: 'bottom',
-    	cutoutPercentage: 88,
+    	cutoutPercentage: 92,
     	rotation:70
     }
 
@@ -27,8 +29,8 @@ export default class Chart extends Component {
 			  data={this.state.chartData}
 			  options={{ 
 			  	title: {
-				  	text: "Revenue",
-				  	textsecond: "200,000 €",
+				  	text: this.state.textTop,
+				  	textsecond: this.state.textBottom, //"200,000 €",
 				  	display: this.props.displayTitle,
 				  	fontSize: 25
 			  	},

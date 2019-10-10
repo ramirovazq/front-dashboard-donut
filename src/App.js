@@ -8,18 +8,23 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        chartData: {},        
+        chartFirstData: {},        
+        chartSecondData: {},        
+        chartThirdData: {},        
     }
     this.getCharData = this.getCharData.bind(this);
   } // constructor
 
   componentWillMount() {
+    // simulate ajax call 
     this.getCharData();
   }
 
   getCharData() {
+
+
     this.setState({
-      chartData: {
+      chartFirstData: {
           labels: ["Tablet", "Smartphone"],
           datasets: [
           {
@@ -36,21 +41,58 @@ class App extends Component {
                     0
               ]
           }]
+        }, // chartData
+      chartSecondData: {
+          labels: ["Tablet", "Smartphone"],
+          datasets: [
+          {
+            data:[
+                  20000,
+                  30000
+              ],
+            backgroundColor: [
+              "#71c8db", 
+              "#2c5166"
+              ],
+            borderWidth: [
+                    0, 
+                    0
+              ]
+          }]
+        }, // chartData
+      chartThirdData: {
+          labels: ["Tablet", "Smartphone"],
+          datasets: [
+          {
+            data:[
+                  120000,
+                  80000
+              ],
+            backgroundColor: [
+              "#ecc62a", 
+              "#bb5822"
+              ],
+            borderWidth: [
+                    0, 
+                    0
+              ]
+          }]
         } // chartData
     })
   }
+
 
   render(){ 
     return (
     <div className="App">
       <div className="in-row">
-        <Chart chartData={this.state.chartData}  />
+        <Chart chartData={this.state.chartFirstData}  textTop="Revenue" textBottom="200.000 €" />
       </div>
       <div className="in-row">
-        <Chart chartData={this.state.chartData}  />
+        <Chart chartData={this.state.chartSecondData}  textTop="Impresions" textBottom="50.000.000" />
       </div>
         <div className="in-row">
-        <Chart chartData={this.state.chartData}  />
+        <Chart chartData={this.state.chartThirdData}  textTop="Visits" textBottom="600.000.000" />
       </div>
     </div>
     );
