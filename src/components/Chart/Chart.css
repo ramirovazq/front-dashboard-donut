@@ -1,7 +1,10 @@
 .my-chart {
             display: table;
-            width: 533px;
-            height: 266px;
+             width: 333px;
+            /* height: 266px;  */
 
             border-bottom:  3px solid #E8E8E8;
         }
+ .in-row {
+ 	display: table-row;
+ }

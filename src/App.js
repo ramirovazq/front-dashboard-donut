@@ -23,7 +23,6 @@ class App extends Component {
           labels: ["Tablet", "Smartphone"],
           datasets: [
           {
-            label: 'Population',
             data:[
                   120000,
                   80000
@@ -44,7 +43,15 @@ class App extends Component {
   render(){ 
     return (
     <div className="App">
-      <Chart chartData={this.state.chartData}  />
+      <div className="in-row">
+        <Chart chartData={this.state.chartData}  />
+      </div>
+      <div className="in-row">
+        <Chart chartData={this.state.chartData}  />
+      </div>
+        <div className="in-row">
+        <Chart chartData={this.state.chartData}  />
+      </div>
     </div>
     );
   }
