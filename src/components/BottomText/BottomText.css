@@ -1,0 +1,28 @@
+.bottom-text {
+    display: table-row;
+  }
+
+ .bottom-left {
+ 	float: left; 
+ 	padding: 10px;
+ 	display: inline-block;
+ }
+
+  .bottom-right {
+  	float: right;
+  	padding: 10px;
+ 	display: inline-block;
+ }
+
+ .simple-gray { 
+ 	color: #BEBEBE;
+   	margin-left: 15px;
+ }
+
+ .simple-left {
+ 	float:left;
+ }
+
+ .simple-right {
+ 	float: right;
+ }

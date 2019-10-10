@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Chart from './components/Chart/Chart';
+import TextDonut from './components/TextDonut/TextDonut';
 import './App.css';
 
 class App extends Component {

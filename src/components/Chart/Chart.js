@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Doughnut} from 'react-chartjs-2';
+import BottomText from '../BottomText/BottomText';
 import './Chart.css';
 
 export default class Chart extends Component {
@@ -12,8 +13,8 @@ export default class Chart extends Component {
 
 
     static defaultProps = {
-    	displayTitle: true,
-    	displayLegend: true,
+    	displayTitle: false,
+    	displayLegend: false,
     	legendPosition: 'bottom',
     	cutoutPercentage: 88,
     	rotation:70
@@ -26,7 +27,8 @@ export default class Chart extends Component {
 			  data={this.state.chartData}
 			  options={{ 
 			  	title: {
-				  	text: "Revenue 200000",
+				  	text: "Revenue",
+				  	textsecond: "200,000 €",
 				  	display: this.props.displayTitle,
 				  	fontSize: 25
 			  	},
@@ -38,6 +40,7 @@ export default class Chart extends Component {
 				rotation:this.props.rotation
 			  }}
 			/>
+      		<BottomText  chartData={this.props.chartData}/>
 	 	</div>
 		)
 	}

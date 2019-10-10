@@ -1,5 +1,7 @@
 .my-chart {
-            display: block;
+            display: table;
             width: 533px;
             height: 266px;
+
+            border-bottom:  3px solid #E8E8E8;
         }
