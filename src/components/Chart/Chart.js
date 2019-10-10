@@ -42,7 +42,7 @@ export default class Chart extends Component {
 				rotation:this.props.rotation
 			  }}
 			/>
-      		<BottomText  chartData={this.props.chartData}/>
+      		<BottomText  chartData={this.props.chartData} numericSymbol={this.props.numericSymbol}/>
 	 	</div>
 		)
 	}

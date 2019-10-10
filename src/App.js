@@ -65,8 +65,8 @@ class App extends Component {
           datasets: [
           {
             data:[
-                  120000,
-                  80000
+                  480000,
+                  120000
               ],
             backgroundColor: [
               "#ecc62a", 
@@ -86,13 +86,13 @@ class App extends Component {
     return (
     <div className="App">
       <div className="in-row">
-        <Chart chartData={this.state.chartFirstData}  textTop="Revenue" textBottom="200.000 €" />
+        <Chart chartData={this.state.chartFirstData}  textTop="Revenue" textBottom="200.000 €"  numericSymbol={true} />
       </div>
       <div className="in-row">
-        <Chart chartData={this.state.chartSecondData}  textTop="Impresions" textBottom="50.000.000" />
+        <Chart chartData={this.state.chartSecondData}  textTop="Impresions" textBottom="50.000.000" numericSymbol={false} />
       </div>
         <div className="in-row">
-        <Chart chartData={this.state.chartThirdData}  textTop="Visits" textBottom="600.000.000" />
+        <Chart chartData={this.state.chartThirdData}  textTop="Visits" textBottom="600.000.000" numericSymbol={false}/>
       </div>
     </div>
     );
